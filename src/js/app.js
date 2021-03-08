@@ -24,36 +24,17 @@ App = {
   },
 
   initWeb3: async function() {
-    if (window.ethereum) {
-      App.web3Provider = window.ethereum;
-      try {
-        //request account access
-        await window.ethereum.enable();
-      } catch (error) {
-        //user denied account access
-        console.error("User denied account access")
-      }
-    }
-
-    //legacy browsers
-    else if (window.web3) {
-      App.web3Provider = window.web3.currentProvider;
-    }
-
-    //if no injected web3 instance is detected, fall back to Ganache
-    else {
-      //#### this is NOT secure for production, only dev
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
-
-    }
-
-    web3 = new Web3(App.web3Provider);
+    /*
+     * Replace me...
+     */
 
     return App.initContract();
   },
 
   initContract: function() {
-    
+    /*
+     * Replace me...
+     */
 
     return App.bindEvents();
   },
